@@ -1,0 +1,34 @@
+﻿@model MvcEDMCrud6622.tblEmployee
+@{
+    ViewBag.Title = "AddEmployee";
+}
+
+<h2>AddEmployee</h2>
+
+@using (Html.BeginForm("AddEmployee", "Emp", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td> Name: </td>
+            <td>@Html.TextBoxFor(p => p.name)</td>
+        </tr>
+
+        <tr>
+            <td> Salary: </td>
+            <td>@Html.TextBoxFor(p => p.salary)</td>
+        </tr>
+
+        <tr>
+            <td> Age: </td>
+            <td>@Html.TextBoxFor(p => p.age)</td>
+        </tr>
+
+
+        <tr>
+            <td>  </td>
+            <td> <input type="submit" id="btnSave" value="Save" /> </td>
+        </tr>
+    </table>
+
+}
+
